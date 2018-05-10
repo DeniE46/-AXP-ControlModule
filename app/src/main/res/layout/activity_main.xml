@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -8,36 +8,66 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.axp.denis.axppanel.MainActivity">
-
+        tools:context="com.axp.denis.axppanel.MainActivity"
+        android:orientation="vertical"
+        android:foregroundTint="@color/colorAccent">
 
         <Button
             android:id="@+id/button_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start AXP Service"/>
-
-        <Button
-            android:id="@+id/test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hide Notes"
-            android:layout_toEndOf="@id/button_start"/>
+            android:text="Start AXP"
+            />
 
         <Button
             android:id="@+id/hide_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/test"
+
             android:text="Hide progress"/>
 
         <Switch
-            android:id="@+id/change_wall"
-            android:layout_width="wrap_content"
+            android:id="@+id/enable_wall"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="switch"
-            android:layout_toEndOf="@id/hide_progress"/>
+            android:text="Enable manual background change" />
 
+        <Switch
+            android:id="@+id/change_wall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch backgrounds" />
 
-    </RelativeLayout>
+        <Switch
+            android:id="@+id/buttons_visibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show/hide buttons" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/swap_notes"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Swap notes" />
+
+            <Switch
+                android:id="@+id/swap_sketches"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Swap sketches" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
 </layout>
